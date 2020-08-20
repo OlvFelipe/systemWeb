@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Container, Title, ContentForm, Input } from './styles';
+import { Container, Title, ContentForm, Input, ActionSave } from './styles';
 
 function Purchase() {
     return (
         <Container>
             <Title>
-                <h3>Registro de pedido</h3>
+                <h3>Registrar de pedido</h3>
             </Title>
             <ContentForm>
                 <Input>
@@ -21,6 +21,10 @@ function Purchase() {
                     <span>Quantidade</span>
                     <input type="number"/>
                 </Input>
+                <ActionSave>
+                    <button type="button">Salvar</button>
+                    <button type="button">Cancelar</button>
+                </ActionSave>
             </ContentForm>
         </Container>
     );
