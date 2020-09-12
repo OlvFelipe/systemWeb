@@ -5,7 +5,7 @@ import { Container } from './styles';
 function Home() {
     return (
         <Container>
-            <h1>Home Component</h1>
+            <h1>Dashboard em desenvolvimento</h1>
         </Container>
     );
 }

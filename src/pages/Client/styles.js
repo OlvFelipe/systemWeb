@@ -8,9 +8,13 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.div`
-    width: 150px;
+    width: 100%;
     height: 2rem;
     margin: auto;
+
+    h3 {
+        text-align: center;
+    }
 `;
 
 export const ContentForm = styled.div`
@@ -32,6 +36,7 @@ export const Input = styled.div`
         color: #dcdcdc;
         margin-top: 20px;
         margin-bottom: 10px;
+        font-weight: bold;
     }
 
     input{

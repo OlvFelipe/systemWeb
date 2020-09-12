@@ -9,6 +9,7 @@ function Client() {
     const [address, setAddress] = useState('');
     const [address_number, setAddress_number] = useState('');
     const [phone, setPhone] = useState('');
+    const [form, setForm] = useState(true);
 
     async function save() {
         await api.post(`/sistema/cadastrar-cliente`, {
@@ -17,18 +18,30 @@ function Client() {
             phone,
             address_number
             })
-            .then((data) => {
-                console.log(data);
+            .then(() => {
+                setForm(false);
             })
             .catch(err => {
                 return err; 
             })
+            .finally(() => {
+                cleanForm();
+            })
+    }
+
+    function cleanForm() {
+        if (form) {
+            setName('');
+            setPhone('');
+            setAddress('');
+            setAddress_number('');
+        }
     }
 
     return (
         <Container>
             <Title>
-                <h3>Cadastro cliente</h3>
+                <h3>Cadastrar Cliente</h3>
             </Title>
             <ContentForm>
                 <Input>
@@ -56,7 +69,7 @@ function Client() {
                     onChange={e => setAddress_number(e.target.value)}/>
                 </Input>
                 <ActionSave>
-                    <button type="button">Cancelar</button>
+                    <button type="button" onClick={cleanForm}>Cancelar</button>
                     <button type="button" onClick={save}>Salvar</button>
                 </ActionSave>
             </ContentForm>

@@ -6,7 +6,7 @@ function Purchase() {
     return (
         <Container>
             <Title>
-                <h3>Registrar de pedido</h3>
+                <h3>Registrar pedido</h3>
             </Title>
             <ContentForm>
                 <Input>
@@ -22,7 +22,7 @@ function Purchase() {
                     <input type="number"/>
                 </Input>
                 <ActionSave>
-                    <button type="button">Salvar</button>
+                    <button type="button">Registrar</button>
                     <button type="button">Cancelar</button>
                 </ActionSave>
             </ContentForm>

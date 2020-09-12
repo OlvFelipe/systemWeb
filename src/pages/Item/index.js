@@ -15,18 +15,19 @@ function Item() {
             quantity,
             price,
             })
-            .then((data) => {
-                console.log(data);
+            .then((item) => {
+                return item.data.msg;
             })
             .catch(err => {
                 return err; 
             })
     }
 
+
     return (
         <Container>
             <Title>
-                <h3>Cadastro Item</h3>
+                <h3>Cadastrar Item</h3>
             </Title>
             <ContentForm>
                 <Input>
