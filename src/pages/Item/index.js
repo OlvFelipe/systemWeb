@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Title, ContentForm, Input, ActionSave } from './styles';
-
+import Button from '@material-ui/core/Button';
 import api from '../../service/api';
 
 function Item() {
@@ -49,8 +49,11 @@ function Item() {
                     onChange={e => setPrice(e.target.value)}/>
                 </Input>
                 <ActionSave>
-                    <button type="button">Cancelar</button>
-                    <button type="button" onClick={save}>Salvar</button>
+                    <Button variant="contained" color="primary">Cancelar</Button>
+                    {/* <button variant="info" onClick={save}>Salvar</button> */}
+                    <Button variant="contained" color="primary" onClick={save}>
+                        Salvar
+                    </Button>
                 </ActionSave>
             </ContentForm>
         </Container>

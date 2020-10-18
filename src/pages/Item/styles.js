@@ -49,14 +49,15 @@ export const ActionSave = styled.div`
     align-items: center;
 
     button{
-        width: 100px;
+        width: auto;
+        height: 2.2em;
         margin-top: 10px;
         margin-right: 15px;
         color: #dcdcdc;
         font-size: 18px;
         font-weight: bold;
         background: #836FFF;
-        border-radius: 5px;
+        border-radius: 24px;
         border: none;
         cursor: pointer;
 
